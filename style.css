@@ -1,5 +1,35 @@
 /* css file of index.html */
 
 body {
-    background-color:#225B66;
+    background-color:#FFFFFF;
+    margin: 0px;
+    padding: 0px;
+}
+
+#top {
+    width:100%;
+    height: 15px;
+    margin:0px;
+    background-color:#225b66;
+}
+
+#title {
+    width: 100%;
+    height: 100px;
+    margin: 0px;
+    background-color:#FFFFFF;
+}
+
+#bio {
+    width: 100%;
+    height: 425px;
+    margin:0px;
+    background-color: #17a3a5;
+}
+
+#bottom {
+    width:100%;
+    height: 75px;
+    margin: 0px;
+    background-color: #8dbf67;
 }
