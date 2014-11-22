@@ -1,35 +1,61 @@
 /* css file of index.html */
 
+/* Google Font for title */
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:300italic);
+
 body {
     background-color:#FFFFFF;
     margin: 0px;
     padding: 0px;
+    font-family: serif;
 }
 
 #top {
-    width:100%;
-    height: 15px;
+    height: 15px; 
     margin:0px;
     background-color:#225b66;
 }
 
 #title {
-    width: 100%;
     height: 100px;
     margin: 0px;
     background-color:#FFFFFF;
+    padding-top: 20px; 
+    padding-left: 40px;
+}
+
+#name{
+    font-family:'Josefin Slab', serif;
+    font-size: 40px;
+    margin: 0px;
+    width:100%;
+}
+
+#shbio {
+    margin: 0px;
 }
 
 #bio {
-    width: 100%;
     height: 425px;
     margin:0px;
-    background-color: #17a3a5;
+    background-color: rgba(23,163,165, 0.7);
 }
 
 #bottom {
-    width:100%;
-    height: 75px;
+    height: 80px;
     margin: 0px;
-    background-color: #8dbf67;
+    background-color: #e85248;
+}
+
+#facebook, #twitter, #linkedin {
+    display:inline-block;
+}
+
+#facebook > img, #twitter > img , #linkedin > img {
+    height: 50px;
+    width: 50px;
+}
+
+#facebook > a, #twitter > a, #linkedin > a{
+    vertical-align:middle;
 }
