@@ -49,10 +49,10 @@ body {
     height:100%;
 }
 
-#left {
-    text-align: center;
-    font-size: 1em;
-    vertical-align:middle;
+#left > img {
+    position:relative;
+    top: 10%;
+    left: 20%;
 }
 
 #right {
@@ -73,6 +73,7 @@ body {
 }
 
 #facebook, #twitter, #linkedin, #email {
+    margin: auto;
     color:#FFFFFF;
     width:24.5%;
     display:inline-block;
@@ -94,5 +95,5 @@ a:hover {
 }
 
 #email {
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
