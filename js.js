@@ -10,14 +10,17 @@ function setSizes(){
     }
 
     if (height < 600){
-        hegith = 600;
+        height = 600;
     }
     
-    // set width all children of body
+    // set width of all the boxes
     $('body').css('width', width);
-    
     $('#name').css('width', width-40); //width - margin left
     $('#shbio').css('width', width-40); //width - margin left
+
+    // set height of all the boxes
+    $('body').css('height', height);
+
 };
 
 $(document).ready(function() {

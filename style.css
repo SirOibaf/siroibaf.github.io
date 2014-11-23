@@ -11,13 +11,13 @@ body {
 }
 
 #top {
-    height: 15px; 
+    height:1%;
     margin:0px;
     background-color:#225b66;
 }
 
 #title {
-    height: 100px;
+    height: 17%;
     margin: 0px;
     background-color:#FFFFFF;
     padding-top: 20px; 
@@ -36,13 +36,13 @@ body {
 }
 
 #bio {
-    height: 425px;
+    height:67%;
     margin:0px;
     background-color: rgba(23,163,165, 0.7);
 }
 
 #bottom {
-    height: 80px;
+    height:15%;
     margin: 0px;
     background-color: #e85248;
 }
@@ -56,6 +56,7 @@ body {
     width: 50px;
 }
 
-#facebook > a, #twitter > a, #linkedin > a{
+#facebook > div, #twitter > div, #linkedin > div{
+    display:inline-block;
     vertical-align:middle;
 }
