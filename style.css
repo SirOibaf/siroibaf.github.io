@@ -2,12 +2,14 @@
 
 /* Google Font for title */
 @import url(http://fonts.googleapis.com/css?family=Josefin+Slab:300italic);
+@import url(http://fonts.googleapis.com/css?family=Neuton:400,700);
 
 body {
     background-color: #FFFFFF;
+    font-family:'Neuton', serif;
+    font-size:1.1em;
     margin: 0px;
     padding: 0px;
-    font-family: serif;
 }
 
 #top {
@@ -44,14 +46,18 @@ body {
 .insBio {
     display: inline-block;
     width: 49%;
+    height:100%;
 }
 
 #left {
     text-align: center;
+    font-size: 1em;
+    vertical-align:middle;
 }
 
 #right {
     text-align: left;
+    vertical-align: middle;
 }
 
 #me {
@@ -62,14 +68,31 @@ body {
 #bottom {
     height:15%;
     margin: 0px;
+    text-align:center;
     background-color: #e85248;
 }
 
-#facebook, #twitter, #linkedin {
+#facebook, #twitter, #linkedin, #email {
+    color:#FFFFFF;
+    width:24.5%;
     display:inline-block;
 }
 
-#facebook > img, #twitter > img , #linkedin > img {
+#facebook > img, #twitter > img , #linkedin > img , #email > img{
     height: 50px;
     width: 50px;
+}
+
+a:link, a:visited, a:active {
+    color: #FFFFFF;
+    text-decoration:none;
+}
+
+a:hover {
+    color: #FFFFFF;
+    text-decoration:underline;
+}
+
+#email {
+    font-size: 0.8em;
 }
