@@ -58,5 +58,6 @@ body {
 
 #facebook > div, #twitter > div, #linkedin > div{
     display:inline-block;
+    height: 100%;
     vertical-align:middle;
 }
