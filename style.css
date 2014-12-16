@@ -1,7 +1,6 @@
 /* css file of index.html */
 
 /* Google Font for title */
-@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:300italic);
 @import url(http://fonts.googleapis.com/css?family=Neuton:400,700);
 
 html,body, div, p {
@@ -24,28 +23,34 @@ body {
     background-color:#FFFFFF;
 }
 
-#name{
-    font-family:'Josefin Slab', serif;
-    font-size: 40px;
+#title p {
+    width: 70%;
+    margin: auto;
 }
 
 #bgmiddle {
     background-color: rgba(23,163,165, 0.7);
 }
 
-.insBio {
+#bioBox {
+    width:70%;
+    margin: auto;
+}
+
+.bio {
     display: inline-block;
     width: 49%;
+    vertical-align:top;
+}
+
+#me {
+    position:relative;
+    top:20%;
+    left:20%;
 }
 
 #right {
     text-align: left;
-    vertical-align: middle;
-}
-
-#me {
-    height: 300; 
-    width: 300;
 }
 
 #bottom {

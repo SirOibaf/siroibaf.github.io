@@ -25,6 +25,18 @@ function setSizes(){
     $('#bgmiddle').height(height*67/100);
     $('#bottom').height(height*15/100);
 
+    // Se Maometto non va alla montagna...
+    $("#bioBox").css("height", "100%");
+    $("#left").css("height", "100%");
+    $("#right").css("height", "100%");
+
+    //Face settings
+    $("#me").height($("#left").width()*3/5); 
+    $("#me").width($("#left").width()*3/5); 
+
+    //Title settings
+    $("#name").css("font-size", "6em");
+
 };
 
 $(document).ready(function() {
