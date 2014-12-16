@@ -12,14 +12,18 @@ function setSizes(){
     if (height < 600){
         height = 600;
     }
-    
-    // set width of all the boxes
-    $('body').css('width', width);
-    $('#name').css('width', width-40); //width - margin left
-    $('#shbio').css('width', width-40); //width - margin left
+
+   // set width of all the boxes
+    $('#top').width(width);
+    $('#title').width(width);
+    $('#bgmiddle').width(width);
+    $('#bottom').width(width);
 
     // set height of all the boxes
-    $('body').css('height', height);
+    $('#top').height(height*1/100);
+    $('#title').height(height*17/100);
+    $('#bgmiddle').height(height*67/100);
+    $('#bottom').height(height*15/100);
 
 };
 
