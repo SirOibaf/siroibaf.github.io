@@ -4,14 +4,13 @@
 function setSizes(){
     var width = $(window).width();
     var height = $(window).height();
-    var fontSize = height*16/940;
 
     if (width < 800){
         width = 800;
     }
 
-    if (height < 700){
-        height = 700;
+    if (height < 600){
+        height = 600;
     }
 
    // set width of all the boxes
