@@ -2,8 +2,10 @@
 
 // Set the sizes of the blocks
 function setSizes(){
+    $("body").css("overflow", "hidden");
     var width = $(window).width();
     var height = $(window).height();
+    $("body").css("overflow", "auto");
 
     if (width < 800){
         width = 800;
@@ -12,6 +14,7 @@ function setSizes(){
     if (height < 600){
         height = 600;
     }
+
 
    // set width of all the boxes
     $('#top').width(width);
@@ -30,13 +33,17 @@ function setSizes(){
     $("#left").css("height", "100%");
     $("#right").css("height", "100%");
 
-
-    //Face settings
-    $("#me").height($("#left").width()*3/5); 
-    $("#me").width($("#left").width()*3/5); 
-
     //Title settings
-    $("#name").css("font-size", "6em");
+    var fontSize = (height - 600)/318;
+    var lineHeight = (height - 600)/318*0.3; 
+    if (fontSize > 1) {
+      fontSize = 1;
+    }
+    if (lineHeight > 0.3) {
+      lineHeight = 0.3;
+    }
+    $("#name").css("font-size", (5+fontSize).toString() + 'em');
+    $("#name").css("line-height", (1.1+lineHeight).toString() + 'em');
 
 };
 
@@ -45,7 +52,6 @@ $(document).ready(function() {
 });
 
 $(window).resize(function() {
-    // Action to do when window is resized
    setSizes();
 });
 
