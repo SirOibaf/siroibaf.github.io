@@ -2,10 +2,8 @@
 
 // Set the sizes of the blocks
 function setSizes(){
-    $("body").css("overflow", "hidden");
     var width = $(window).width();
     var height = $(window).height();
-    $("body").css("overflow", "auto");
 
     if (width < 800){
         width = 800;
@@ -14,7 +12,6 @@ function setSizes(){
     if (height < 600){
         height = 600;
     }
-
 
    // set width of all the boxes
     $('#top').width(width);
@@ -33,6 +30,16 @@ function setSizes(){
     $("#left").css("height", "100%");
     $("#right").css("height", "100%");
 
+    // Centering settings
+    var centering = (width - 800)/1120*30
+    if (centering> 30) {
+      centering = 30;
+    }
+   
+    $("#name").css("width", width*(100-centering)/100);
+    $("#bioBox").css("width", width*(100-centering)/100);
+    $(".bio").css("width", $(".bio").parent().width()*49/100);
+
     //Title settings
     var fontSize = (height - 600)/318;
     var lineHeight = (height - 600)/318*0.3; 
@@ -45,6 +52,12 @@ function setSizes(){
     $("#name").css("font-size", (5+fontSize).toString() + 'em');
     $("#name").css("line-height", (1.1+lineHeight).toString() + 'em');
 
+    //Image settings
+    if ($("#me").parent().width() < $("#me").parent().height()) {
+      $("#me").css("width", $("#me").parent().width()*60/100);
+    } else {
+      $("#me").css("width", $("#me").parent().height()*60/100);
+    }
 };
 
 $(document).ready(function() {
@@ -52,7 +65,9 @@ $(document).ready(function() {
 });
 
 $(window).resize(function() {
+   $("body").css("overflow", "hidden");
    setSizes();
+   $("body").css("overflow", "auto");
 });
 
 

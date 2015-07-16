@@ -18,6 +18,7 @@ body {
     font-family:'Neuton', serif;
     height:100%;
     width: 100%;
+    overflow:hidden;
 }
 
 #top {
@@ -30,7 +31,6 @@ body {
 }
 
 #name {
-    width: 70%;
     height: 100%;
     margin: auto;
 }
@@ -40,24 +40,23 @@ body {
 }
 
 #bioBox {
-    width:70%;
     margin: auto;
 }
 
 .bio {
     display: inline-block;
-    width: 49%;
     vertical-align:top;
 }
 
 #me {
     /*height:80%;
     width:80%;*/
-    max-width:80%;
     height: auto;
+    width: auto;
     position:relative;
-    top:10%;
-    left:10%;
+    top: 17%;
+    left: 15%;
+    margin: auto;
 }
 
 #right {
