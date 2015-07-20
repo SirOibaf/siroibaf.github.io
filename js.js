@@ -58,6 +58,15 @@ function setSizes(){
     } else {
       $("#me").css("width", $("#me").parent().height()*60/100);
     }
+     
+    $("#me").css("top", $("#me").parent().height()*20/100);
+
+    // Bio settings
+    $("#inside").height($("#inside").parent().height()*60/100);
+    $("#inside").css("top", $("#inside").parent().height()*15/100);
+    $("#inside").css("font-size", 19+(fontSize*6));
+
+
 };
 
 $(document).ready(function() {
