@@ -36,7 +36,7 @@ function setSizes(){
     if (centering> 30) {
       centering = 30;
     }
-   
+
     $("#titleInside").css("width", width*(100-centering)/100);
     $("#name").css("width", $("#name").parent().width()*50/100);
     $("#menu").css("width", $("#menu").parent().width()*48/100);
@@ -45,7 +45,7 @@ function setSizes(){
 
     //Title settings
     var fontSize = (height - 600)/318;
-    var lineHeight = (height - 600)/318*0.3; 
+    var lineHeight = (height - 600)/318*0.3;
     if (fontSize > 1) {
       fontSize = 1;
     }
@@ -53,7 +53,7 @@ function setSizes(){
       lineHeight = 0.3;
     }
     $("#name").css("font-size", (5+fontSize).toString() + 'em');
-    $("#name").css("line-height", (1.1+lineHeight).toString() + 'em');
+    $("#name").css("line-height", (1.2+lineHeight).toString() + 'em');
 
     //Image settings
     if ($("#me").parent().width() < $("#me").parent().height()) {
@@ -61,7 +61,7 @@ function setSizes(){
     } else {
       $("#me").css("width", $("#me").parent().height()*60/100);
     }
-     
+
     $("#me").css("top", $("#me").parent().height()*20/100);
 
     // Bio settings
@@ -75,6 +75,18 @@ function setSizes(){
 
 $(document).ready(function() {
     setSizes();
+
+    $("#projectsLink").click(function() {
+      $("#text").text("I haven't done any interesting project yet");
+    });
+
+    $("#bioLink").click(function() {
+      $("#text").html("I'm a 22 years old nerd, passionate about technology and open source.<br>" +
+          "I received my bachelor degree in Computer Science at the University of Trento. <br>" +
+          "Now I am looking forward to start a new exiting experience as student of the EIT ICT Master School" +
+          "in the major of Cloud Computing and Services.<br>" +
+          "When not studying, I try to contribute to some opensource projects or I read books.");
+    });
 });
 
 $(window).resize(function() {
@@ -82,5 +94,4 @@ $(window).resize(function() {
    setSizes();
    $("body").css("overflow", "auto");
 });
-
 
