@@ -22,6 +22,7 @@ function setSizes(){
     // set height of all the boxes
     $('#top').height(height*1/100);
     $('#title').height(height*17/100);
+    $('#titleInside').height(height*17/100);
     $('#bgmiddle').height(height*67/100);
     $('#bottom').height(height*15/100);
 
@@ -36,7 +37,9 @@ function setSizes(){
       centering = 30;
     }
    
-    $("#name").css("width", width*(100-centering)/100);
+    $("#titleInside").css("width", width*(100-centering)/100);
+    $("#name").css("width", $("#name").parent().width()*50/100);
+    $("#menu").css("width", $("#menu").parent().width()*48/100);
     $("#bioBox").css("width", width*(100-centering)/100);
     $(".bio").css("width", $(".bio").parent().width()*49/100);
 
@@ -66,7 +69,8 @@ function setSizes(){
     $("#inside").css("top", $("#inside").parent().height()*15/100);
     $("#inside").css("font-size", 19+(fontSize*6));
 
-
+    // Bottom settings
+    $("#floater").height($("#bottom").height()*11/100);
 };
 
 $(document).ready(function() {

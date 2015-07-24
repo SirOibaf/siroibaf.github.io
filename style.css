@@ -33,6 +33,14 @@ body {
 #name {
     height: 100%;
     margin: auto;
+    display: inline-block;
+}
+
+#menu {
+    height:100%;
+    margin:0;
+    display: inline-block;
+    text-align: right;
 }
 
 #bgmiddle {
@@ -72,6 +80,10 @@ body {
     background-color: #e85248;
 }
 
+#floater {
+  height:5px;
+}
+
 #facebook, #twitter, #linkedin, #email {
     margin: auto;
     color:#FFFFFF;
@@ -80,8 +92,8 @@ body {
 }
 
 #facebook > img, #twitter > img , #linkedin > img , #email > img{
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
 }
 
 a:link, a:visited, a:active {
@@ -95,5 +107,5 @@ a:hover {
 }
 
 #email {
-    font-size: 0.7em;
+    font-size: 0.8em;
 }
