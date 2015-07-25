@@ -31,19 +31,23 @@ body {
 }
 
 #titleInside {
+    width: 1024px;
     margin: auto;
 }
 
 #name {
     height: 100%;
+    width: 512px;
     display: inline-block;
-    font-size: 5em;
-    line-height: 1.2em;
+    font-size: 85px;
+    position:relative;
 }
 
 #menu {
+    width: 508px;
     margin:0;
     display: inline-block;
+    position: relative;
     text-align: right;
     font-size: 35px;
     word-spacing: 30px;
@@ -58,20 +62,20 @@ body {
 }
 
 #bioBox {
+    width: 1024px;
     margin: auto;
 }
 
 .bio {
     display: inline-block;
     vertical-align:top;
+    width: 501px;
     font-size: 25px;
 }
 
 #me {
-    /*height:80%;
-    width:80%;*/
     height: auto;
-    width: auto;
+    width: 300px;
     position:relative;
     left: 15%;
     margin: auto;
@@ -79,10 +83,11 @@ body {
 
 #right {
     text-align: left;
+    font-size: 22px;
 }
 
 #inside{
-  position:relative;
+    position: relative;
 }
 
 #bottom {
@@ -90,7 +95,12 @@ body {
     background-color: #e85248;
 }
 
-#floater {
+#insideBottom{
+    width: 1024px;
+    margin: auto;
+}
+
+.floater {
   height:5px;
 }
 
@@ -98,6 +108,7 @@ body {
     margin: auto;
     color:#FFFFFF;
     width:24.5%;
+    font-size: 16px;
     display:inline-block;
 }
 
@@ -114,8 +125,4 @@ a:link, a:visited, a:active {
 a:hover {
     color: #FFFFFF;
     text-decoration:underline;
-}
-
-#email {
-    font-size: 0.8em;
 }
