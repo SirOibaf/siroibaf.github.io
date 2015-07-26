@@ -1,11 +1,11 @@
-/* css file of index.html */
+/* desktop css file */
 
 /* Google Font for title */
 @import url(http://fonts.googleapis.com/css?family=Neuton:400,700);
 
 html, body, div, p, img {
-    margin:0px;
-    padding:0px;
+  margin:0px;
+  padding:0px;
 }
 
 html {
@@ -14,90 +14,89 @@ html {
 }
 
 body {
-    background-color: #FFFFFF;
-    font-family:'Neuton', serif;
-    height:100%;
-    width: 100%;
-    overflow:hidden;
+  background-color: #FFFFFF;
+  font-family:'Neuton', serif;
+  height:100%;
+  width: 100%;
+  overflow:hidden;
 }
 
 #top {
-    background-color:#225b66;
+  background-color:#225b66;
 }
 
 #title {
-    background-color:#FFFFFF;
-    padding:0px;
+  background-color:#FFFFFF;
 }
 
 #titleInside {
-    width: 1024px;
-    margin: auto;
+  width: 1024px;
+  margin: auto;
 }
 
 #name {
-    height: 100%;
-    width: 512px;
-    display: inline-block;
-    font-size: 85px;
-    position:relative;
+  height: 100%;
+  width: 512px;
+  display: inline-block;
+  font-size: 85px;
+  position:relative;
 }
 
 #menu {
-    width: 508px;
-    margin:0;
-    display: inline-block;
-    position: relative;
-    text-align: right;
-    font-size: 35px;
-    word-spacing: 30px;
+  width: 508px;
+  margin:0;
+  display: inline-block;
+  position: relative;
+  text-align: right;
+  font-size: 35px;
+  word-spacing: 30px;
 }
 
 #bioLink:hover, #projectsLink:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 #bgmiddle {
-    background-color: rgba(23,163,165, 0.55);
+  background-color: rgba(23,163,165, 0.55);
 }
 
 #bioBox {
-    width: 1024px;
-    margin: auto;
+  width: 1024px;
+  margin: auto;
 }
 
 .bio {
-    display: inline-block;
-    vertical-align:top;
-    width: 501px;
-    font-size: 25px;
+  display: inline-block;
+  vertical-align:top;
+  width: 501px;
+  font-size: 25px;
 }
 
 #me {
-    height: auto;
-    width: 300px;
-    position:relative;
-    left: 15%;
-    margin: auto;
+  height: auto;
+  width: 300px;
+  position:relative;
+  left: 15%;
+  margin: auto;
 }
 
 #right {
-    text-align: left;
-    font-size: 22px;
+  text-align: left;
+  font-size: 22px;
 }
 
 #inside{
-    position: relative;
+  position: relative;
 }
 
 #bottom {
-    text-align:center;
-    background-color: #e85248;
+  text-align:center;
+  background-color: #e85248;
 }
 
 #insideBottom{
-    width: 1024px;
-    margin: auto;
+  width: 1024px;
+  margin: auto;
 }
 
 .floater {
@@ -105,24 +104,24 @@ body {
 }
 
 #facebook, #twitter, #linkedin, #email {
-    margin: auto;
-    color:#FFFFFF;
-    width:24.5%;
-    font-size: 16px;
-    display:inline-block;
+  margin: auto;
+  color:#FFFFFF;
+  width:24.5%;
+  font-size: 16px;
+  display:inline-block;
 }
 
 #facebook > img, #twitter > img , #linkedin > img , #email > img{
-    height: 50px;
-    width: 50px;
+  height: 50px;
+  width: 50px;
 }
 
 a:link, a:visited, a:active {
-    color: #FFFFFF;
-    text-decoration:none;
+  color: #FFFFFF;
+  text-decoration:none;
 }
 
 a:hover {
-    color: #FFFFFF;
-    text-decoration:underline;
+  color: #FFFFFF;
+  text-decoration:underline;
 }

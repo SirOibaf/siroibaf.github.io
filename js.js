@@ -1,68 +1,86 @@
 /* Javascript index.html */
 
 // Set the sizes of the blocks
-function setSizes(){
-    var width = $(window).width();
-    var height = $(window).height();
+function setSizesDesktop(){
+  // show menu
+  $("#menu").css("visibility", "visible");
 
-    if (height < 600){
-        height = 600;
-    }
+  var width = $(window).width();
+  var height = $(window).height();
 
-    if (width < 1024) {
-        width = 1024;
-    }
+  if (height < 600){
+      height = 600;
+  }
 
-   // set width of all the boxes
-    $('#top').width(width);
-    $('#title').width(width);
-    $('#bgmiddle').width(width);
-    $('#bottom').width(width);
+  if (width < 1024) {
+      width = 1024;
+  }
 
-    // set height of all the boxes
-    $('#top').height(height*1/100);
-    $('#title').height(height*17/100);
-    $('#titleInside').height(height*17/100);
-    $('#bgmiddle').height(height*67/100);
-    $('#bottom').height(height*15/100);
-    $('#insideBottom').height(height*15/100);
+  // set width of all the boxes
+  $('#top').width(width);
+  $('#title').width(width);
+  $('#bgmiddle').width(width);
+  $('#bottom').width(width);
 
-    // Se Maometto non va alla montagna...
-    $("#bioBox").css("height", "100%");
-    $("#left").css("height", "100%");
-    $("#right").css("height", "100%");
+  // set height of all the boxes
+  $('#top').height(height*1/100);
+  $('#title').height(height*17/100);
+  $('#titleInside').height(height*17/100);
+  $('#bgmiddle').height(height*67/100);
+  $('#bottom').height(height*15/100);
+  $('#insideBottom').height(height*15/100);
 
-    // Name position
-    $("#name").css("top", ($("#name").parent().height() - 100)/2 + "px");
-    $("#menu").css("top", ($("#menu").parent().height() - 100)/2 + "px");
+  // Se Maometto non va alla montagna...
+  $("#bioBox").css("height", "100%");
+  $("#left").css("height", "100%");
+  $("#right").css("height", "100%");
 
-    // Image position
-    $("#me").css("top", ($("#me").parent().height() - 300)/2 + "px");
-    $("#inside").css("top", ($("#me").parent().height() - 370)/2 + "px"); //Same top of the image
+  // Name position
+  $("#name").css("top", ($("#name").parent().height() - 100)/2 + "px");
+  $("#menu").css("top", ($("#menu").parent().height() - 100)/2 + "px");
 
-    // Bottom settings
-    $(".floater").height(($("#bottom").height()-80)/2);
+  // Image position
+  $("#me").css("top", ($("#me").parent().height() - 300)/2 + "px");
+  $("#inside").css("top", ($("#me").parent().height() - 370)/2 + "px"); //Same top of the image
+
+  // Bottom settings
+  $(".floater").height(($("#bottom").height()-65)/2);
+
+  // Button behavior
+  $("#projectsLink").click(function() {
+    $("#text").text("I haven't done any interesting project yet");
+  });
+
+  $("#bioLink").click(function() {
+    $("#text").html("I'm a 22 years old nerd, passionate about technology and open source.<br>" +
+        "I received my bachelor degree in Computer Science at the University of Trento. <br>" +
+        "Now I am looking forward to start a new exiting experience as student of the EIT ICT Master School" +
+        "in the major of Cloud Computing and Services.<br>" +
+        "When not studying, I try to contribute to some opensource projects or I read books.");
+  });
 };
 
+function setSizesMobile() {
+  $("#menu").css("visibility", "hidden");
+}
+
 $(document).ready(function() {
-    setSizes();
-
-    $("#projectsLink").click(function() {
-      $("#text").text("I haven't done any interesting project yet");
-    });
-
-    $("#bioLink").click(function() {
-      $("#text").html("I'm a 22 years old nerd, passionate about technology and open source.<br>" +
-          "I received my bachelor degree in Computer Science at the University of Trento. <br>" +
-          "Now I am looking forward to start a new exiting experience as student of the EIT ICT Master School" +
-          "in the major of Cloud Computing and Services.<br>" +
-          "When not studying, I try to contribute to some opensource projects or I read books.");
-    });
+  if ($(window).width() >= 1024) {
+    setSizesDesktop();
+  } else {
+    setSizesMobile();
+  }
 });
 
 $(window).resize(function() {
-   $("body").css("overflow", "hidden");
-   setSizes();
-   $("body").css("overflow", "auto");
+  $("body").css("overflow", "hidden");
+
+  if ($(window).width() >= 1024) {
+    setSizesDesktop();
+  } else {
+    setSizesMobile();
+  }
+
+  $("body").css("overflow", "auto");
 });
 

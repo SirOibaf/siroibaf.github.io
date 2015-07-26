@@ -1,0 +1,36 @@
+@import url(http://fonts.googleapis.com/css?family=Neuton:400,700);
+
+html, body, div, p, img {
+  margin:0px;
+  padding:0px;
+}
+
+html {
+  height:100%;
+  width: 100%;
+}
+
+body {
+  background-color: #FFFFFF;
+  font-family:'Neuton', serif;
+  height:100%;
+  width: 100%;
+  overflow:hidden;
+}
+
+#top {
+  background-color:#225b66;
+  height: 10px;
+}
+
+#title {
+  background-color:#FFFFFF;
+}
+
+#bgmiddle {
+  background-color: rgba(23,163,165, 0.55);
+}
+
+#bottom{
+  background-color: #e85248;
+}
