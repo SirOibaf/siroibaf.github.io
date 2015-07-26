@@ -101,7 +101,7 @@ body {
 }
 
 .floater {
-  height:5px;
+  height:35px;
 }
 
 #facebook, #twitter, #linkedin, #email {
@@ -113,8 +113,8 @@ body {
 }
 
 #facebook > img, #twitter > img , #linkedin > img , #email > img{
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
 }
 
 a:link, a:visited, a:active {
