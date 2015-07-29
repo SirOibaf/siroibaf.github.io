@@ -8,6 +8,7 @@ html, body, div, p, img {
 html {
   height:100%;
   width: 100%;
+  min-width:350px;
 }
 
 body {
@@ -56,10 +57,27 @@ body {
 
 #right{
   width: 90%;
-  position: relative;
-  left: 5%;
+  margin: auto;
+  text-align: center;
   font-size: 18px;
   padding-bottom: 15px;
+}
+
+#inside {
+  width: 85%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#leftArrow, #rightArrow {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.arrow {
+  width: 15px;
+  position: relative;
+  top: 50%;
 }
 
 #bottom{
