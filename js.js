@@ -122,6 +122,7 @@ function setSizesMobile() {
 }
 
 $(document).ready(function() {
+  alert($(window).width());
   if ($(window).width() >= 1024) {
     setSizesDesktop();
   } else {
@@ -136,6 +137,4 @@ $(window).resize(function() {
   } else {
     setSizesMobile();
   }
-
 });
-
