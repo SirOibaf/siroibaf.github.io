@@ -60,7 +60,7 @@ function setSizesDesktop(){
   $("#bioLink").click(function() {
     $("#text").html("I'm a 22 years old nerd, passionate about technology and open source.<br>" +
         "I received my bachelor degree in Computer Science at the University of Trento. <br>" +
-        "Now I am looking forward to start a new exiting experience as student of the EIT ICT Master School " +
+        "Now I am looking forward to start a new exciting experience as student of the EIT ICT Master School " +
         "in the major of Cloud Computing and Services.<br>" +
         "When not studying, I try to contribute to some opensource projects or I read books.");
   });
@@ -70,6 +70,7 @@ function setSizesDesktop(){
 };
 
 function setSizesMobile() {
+  alert("Function called");
   // reset previous options
 
   var aRight = $("#ar").css("visibility");
@@ -82,21 +83,28 @@ function setSizesMobile() {
 
   var white = $(window).height() - ($("#top").height() + $("#title").height() + $("#bgmiddle").height() + $("#bottom").height());
 
+  alert(white);
   if (white > 0){
-    // reset heights
+    //set containers' height
     var height = $(window).height();
+    $("body").css("font-size", "2em");
     $('#top').css("height", height*1/100);
     $('#title').css("height", height*7/100);
-    $('#bgmiddle').css("height", height*62.5/100 + 1);
+    $('#bgmiddle').css("height", height*65.5/100 + 1);
     $('#left').css("height", $("#bgmiddle").parent().height()*26/100);
     $('#right').css("height", $("#bgmiddle").parent().height()*30/100);
-    $('#bottom').css("height",height*27/100);
+    $('#bottom').css("height",height*26/100);
 
-    $('#me').css("height", $("#bgmiddle").height()*38/100);
-    $('#me').css("top", $("#me").parent().height()*5/100);
+    $('#me').css("height", $("#bgmiddle").height()*45/100);
+    $('#me').css("top", $("#me").parent().height()*15/100);
+
+    // set description font-size
+   // $("#right").css("font-size", $("#right").height() * 0.10
 
     $("#leftArrow, #rightArrow").css("height", $("#right").height());
+    $("#facebook .floater").height($("#bottom").height()*13/100);
   }
+
 
   if ((aLeft == "visible" && aRight == "visible") || (aLeft == "hidden")) {
     $("#al").css("visibility", "hidden");
@@ -104,36 +112,42 @@ function setSizesMobile() {
     $("#ar").css("visibility", "hidden");
   }
 
-  $("#ar").click(function() {
-    $("#text").html("I haven't done any interesting project yet<br><br> <br><br><br><br>");
-    $("#ar").css("visibility", "hidden");
-    $("#al").css("visibility", "visible");
-  });
-
-  $("#al").click(function() {
-    $("#text").html("I'm a 22 years old nerd, passionate about technology and open source.<br>" +
-        "I received my bachelor degree in Computer Science at the University of Trento. <br>" +
-        "Now I am looking forward to start a new exiting experience as student of the EIT ICT Master School " +
-        "in the major of Cloud Computing and Services.<br>" +
-        "When not studying, I try to contribute to some opensource projects or I read books.");
-    $("#al").css("visibility", "hidden");
-    $("#ar").css("visibility", "visible");
-  });
-}
+ };
 
 $(document).ready(function() {
-  if ($(window).width() >= 1024) {
+  if ($(window).width() >= 1024 && window.screen.width >= 1024) {
     setSizesDesktop();
   } else {
+    $("#stylesheet").attr('href', "mobile.css");
     setSizesMobile();
   }
+
+  $("#ar").click(function() {
+        $("#text").html("I haven't done any interesting project yet<br><br><br>");
+        $("#ar").css("visibility", "hidden");
+        $("#al").css("visibility", "visible");
+        setSizesMobile();
+      });
+
+  $("#al").click(function() {
+        $("#text").html("I'm a 22 years old nerd, passionate about technology and open source.<br>" +
+            "I received my bachelor degree in Computer Science at the University of Trento. <br>" +
+            "Now I am looking forward to start a new exciting experience as student of the EIT ICT Master School " +
+            "in the major of Cloud Computing and Services.<br>" +
+            "When not studying, I try to contribute to some opensource projects or I read books.");
+        $("#al").css("visibility", "hidden");
+        $("#ar").css("visibility", "visible");
+        setSizesMobile();
+  });
 });
 
 $(window).resize(function() {
 
-  if ($(window).width() >= 1024) {
+  if ($(window).width() >= 1024 && window.screen.width >= 1024) {
+    $("#stylesheet").attr('href', "desktop.css");
     setSizesDesktop();
   } else {
+    $("#stylesheet").attr('href', "mobile.css");
     setSizesMobile();
   }
 });
