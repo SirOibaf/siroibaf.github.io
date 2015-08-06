@@ -117,7 +117,7 @@ $(document).ready(function() {
     setSizesDesktop();
   } else {
     $("#stylesheet").attr('href', "mobile.css");
-    setSizesMobile();
+    setTimeout(setSizesMobile, 300);
   }
 
   $("#projectsLink").click(function() {
