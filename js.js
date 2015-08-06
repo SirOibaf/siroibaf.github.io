@@ -110,7 +110,7 @@ $(document).ready(function() {
     setSizesDesktop();
   } else {
     $("#stylesheet").attr('href', "mobile.css");
-    setTimeout(setSizesMobile, 200);
+    setTimeout(setSizesMobile, 100);
   }
 
   $("#projectsLink").click(function() {
@@ -153,12 +153,12 @@ $(window).resize(function() {
     if ($("#stylesheet").attr('href') != "dekstop.css") {
       $("#stylesheet").attr('href', "desktop.css");
     }
-    setTimeout(setSizesDesktop, 200);
+    setTimeout(setSizesDesktop, 100);
   } else {
     if ($("#stylesheet").attr('href') != "mobile.css") {
       $("#stylesheet").attr('href', "mobile.css");
     }
-    setTimeout(setSizesMobile, 200);
+    setTimeout(setSizesMobile, 100);
   }
 });
 
