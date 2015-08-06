@@ -74,12 +74,7 @@ function setSizesMobile() {
   $(".floater").css("visibility", "hidden");
   $(".arrow").show();
 
-  var mobile = navigator.userAgent.match(/Mobi/) || navigator.userAgent.match(/Android/);
-  var wb = whiteBottom();
-  if (wb) {
-    // mobile!
-    var height = $(window).height();
-    console.log(height);
+  if (whiteBottom()) {
 
     $('#top').css("height", height*1/100);
     $('#title').css("height", height*7/100);
@@ -96,9 +91,7 @@ function setSizesMobile() {
     // set description font-size
     // $("#right").css("font-size", $("#right").height() * 0.10
 
-    if (!wb || mobile) {
-      $("#facebook .floater").height($("#bottom").height()*13/100);
-    }
+    $("#facebook .floater").height($("#bottom").height()*15/100);
   }
 
   $("#leftArrow, #rightArrow").css("height", $("#right").height());
@@ -160,12 +153,12 @@ $(window).resize(function() {
     if ($("#stylesheet").attr('href') != "dekstop.css") {
       $("#stylesheet").attr('href', "desktop.css");
     }
-    setSizesDesktop();
+    setTimeout(setSizesDesktop, 300);
   } else {
     if ($("#stylesheet").attr('href') != "mobile.css") {
       $("#stylesheet").attr('href', "mobile.css");
     }
-    setSizesMobile();
+    setTimeout(setSizesMobile, 300);
   }
 });
 
