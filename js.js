@@ -74,8 +74,9 @@ function setSizesMobile() {
   $(".floater").css("visibility", "hidden");
   $(".arrow").show();
 
-  if (whiteBottom()) {
-
+  var mobile = navigator.userAgent.match(/Mobi/) || navigator.userAgent.match(/Android/);
+  var wb = whiteBottom();
+  if (wb || mobile) {
     $('#top').css("height", height*1/100);
     $('#title').css("height", height*7/100);
     $('#bgmiddle').css("height", height*65.5/100);
@@ -91,7 +92,9 @@ function setSizesMobile() {
     // set description font-size
     // $("#right").css("font-size", $("#right").height() * 0.10
 
-    $("#facebook .floater").height($("#bottom").height()*15/100);
+    if (!wb || mobile) {
+      $("#facebook .floater").height($("#bottom").height()*13/100);
+    }
   }
 
   $("#leftArrow, #rightArrow").css("height", $("#right").height());
