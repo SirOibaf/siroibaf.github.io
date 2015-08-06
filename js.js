@@ -76,29 +76,26 @@ function setSizesMobile() {
 
   var mobile = navigator.userAgent.match(/Mobi/) || navigator.userAgent.match(/Android/);
   var wb = whiteBottom();
-  if (wb || mobile) {
+  if (wb || (mobile && ($(window).height() > $(window).width()))) {
+    var height = $(window).height();
     $('#top').css("height", height*1/100);
-    $('#title').css("height", height*7/100);
-    $('#bgmiddle').css("height", height*65.5/100);
+    $('#title').css("height", height*10/100);
+    $('#bgmiddle').css("height", height*60.5/100);
     $('#left').css("height", $("#bgmiddle").parent().height()*26/100);
     $('#right').css("height", $("#bgmiddle").parent().height()*30/100);
     $('#right').css("padding-top", $("#right").height()*15/100);
-    $('#bottom').css("height",height*25.5/100);
+    $('#bottom').css("height",height*27.5/100);
 
-    // img size
-    $('#me').height($("#bgmiddle").height()*40/100);
-    $('#me').css("top", $("#me").parent().height()*15/100);
-
-    // set description font-size
-    // $("#right").css("font-size", $("#right").height() * 0.10
-
-    if (!wb || mobile) {
+    if (mobile) {
+      $("#name").css("padding-top", 20);
+      $('#me').height($("#bgmiddle").height()*40/100);
+      $('#me').css("top", $("#me").parent().height()*15/100);
+      $("#right").css("margin-top", -100);
       $("#facebook .floater").height($("#bottom").height()*13/100);
     }
   }
 
   $("#leftArrow, #rightArrow").css("height", $("#right").height());
-
 
   if (page == 0) {
     $("#al").css("visibility", "hidden");
@@ -131,7 +128,7 @@ $(document).ready(function() {
   });
 
   $("#ar").click(function() {
-    $("#text").html("I haven't done any interesting project yet<br><br><br><br><br><br><br>");
+    $("#text").html("I haven't done any interesting project yet<br><br>");
     $("#ar").css("visibility", "hidden");
     $("#al").css("visibility", "visible");
     page = 1;
