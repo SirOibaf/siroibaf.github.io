@@ -76,7 +76,7 @@ function setSizesMobile() {
 
   var mobile = navigator.userAgent.match(/Mobi/) || navigator.userAgent.match(/Android/);
   var wb = whiteBottom();
-  if ((mobile && ($(window).height() > $(window).width())) || wb) {
+  if (wb) {
     // mobile!
     var height = $(window).height();
     console.log(height);
