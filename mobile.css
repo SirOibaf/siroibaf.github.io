@@ -30,8 +30,7 @@ body {
 #name {
   width: 90%;
   margin-left: 5%;
-  margin-top: 1vw;
-  font-size: 9vw;
+  font-size: 70px;
 }
 
 #bgmiddle {
@@ -43,23 +42,22 @@ body {
 }
 
 #left {
-  height: 210px;
   text-align: center;
+  height: 370px;
 }
 
 #me {
-  height: 200px;
+  height: 300px;
   width: auto;
-  margin: auto;
   position: relative;
-  top: 3%;
+  top: 50px;
 }
 
 #right{
   width: 90%;
   margin: auto;
   text-align: center;
-  font-size: 2.3vw;
+  font-size: 22px;
   padding-bottom: 15px;
 }
 
@@ -84,7 +82,7 @@ body {
   padding-top: 15px;
   background-color: #e85248;
   color: #FFFFFF;
-  font-size: 2vw;
+  font-size: 20px;
 }
 
 #facebook img, #twitter img, #linkedin img, #email img {
