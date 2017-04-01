@@ -1,0 +1,54 @@
+/* Main color: Pantone color of the year 2012 -> #e1523d */
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+
+body {
+  font-family: Raleway, sans-serif;
+  font-weight: 300;
+  padding-top: 30px;
+}
+
+#container {
+  max-width: 500px;
+  margin: auto;
+}
+
+#top {
+  border-bottom: 0.8px solid #e1523d;
+  text-align: center;
+}
+
+#top > img {
+  width: 150px;
+  height: 150px;
+}
+
+#name {
+  font-size: 50px;
+  font-weight: 400;
+  margin-top: 17px;
+  margin-bottom: 17px;
+}
+
+#contrast {
+  color: #ffffff;
+  background: #e1523d;
+}
+
+#social {
+  margin-bottom: 1em;
+}
+
+#social > img {
+  width: 28px;
+  height: 28px;
+}
+
+#bottom > p {
+  text-align: justify;
+  line-height: 1.5em;
+}
+
+a:link, a:visited, a:hover a:active {
+  color: #e1523d;
+  text-decoration: none;
+}
